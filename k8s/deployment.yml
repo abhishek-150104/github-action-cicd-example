@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github-action-cicd-example
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: github-action-cicd-example
+
+  template:
+    metadata:
+      labels:
+        app: github-action-cicd-example
+
+    spec:
+      containers:
+        - name: github-action-cicd-example
+          image: dockerrunabhi/github-action-cicd-example:latest
+          ports:
+            - containerPort: 8080
