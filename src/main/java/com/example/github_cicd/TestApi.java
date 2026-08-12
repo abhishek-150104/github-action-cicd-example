@@ -12,5 +12,9 @@ public class TestApi {
     public String test() {
         return "Hello World";
     }
+     @RequestMapping(value = "/test2",method = RequestMethod.GET)
+    public String test2() {
+        return "Hello World";
+    }
 
 }
